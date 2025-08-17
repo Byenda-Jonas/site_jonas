@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famille Pbl Byenda</title>
+  <meta name="description" content="Découvrez la famille Pbl Byenda, notre histoire, nos membres et notre amour familial.">
+  <meta name="keywords" content="famille, Pbl Byenda, portraits, photos, amour familial">
+  <meta name="robots" content="index, follow">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: "Poppins", sans-serif;
+        /* Remplacement du gradient par une image */
+      background-image: url('fleur3.jpeg'); /* ou 'images/fleur.jpg' selon le chemin */
+      background-size: cover;           /* pour que l'image couvre tout l'écran */
+      background-position: center;      /* centrer l'image */
+      background-repeat: no-repeat;     /* éviter les répétitions */
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px rgba(255,152,0,0.8);
+    }
+
+    
+      /* CONTENEUR DE MEMBRES EN DEUX COLONNES */
+  .famille-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+
+    .member {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin: 15px auto;
+      border-radius: 15px;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+
+    }
+
+    .member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #ff9800;
+      background-color: black;
+    }
+
+    
+    /* DESCRIPTION MASQUÉE PAR DÉFAUT */
+    .desc {
+      display: none;
+      margin-top: 10px;
+      text-align: justify;
+      color: #ffd580;
+    }
+
+    /* BOUTON VOIR PLUS */
+    .desc-btn {
+      margin-top: 10px;
+      padding: 8px 18px;
+      font-size: 0.9em;
+      border: none;
+      border-radius: 20px;
+      background: #ff9800;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .desc-btn:hover {
+      background: #e68900;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      background: #ff9800;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background: #e68900;
+    }
+
+.member img {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.member img.zoomed {
+  transform: scale(2); /* Zoom x2 */
+  z-index: 1000;
+  position: relative;
+}
+  </style>
+</head>
+<body>
+ <h1>👨‍👩‍👧 Notre Famille</h1>
+
+<div class="famille-container">
+  <div class="member">
+    <img src="pere.jpg" alt="Père">
+    <h2>Pbl Byenda</h2>
+    <p class="desc">
+      Merci Papa pour tout ton amour, ton courage et ta sagesse. 🙏  
+      Tu m’as toujours inspiré à poursuivre mes rêves, à rester curieux et à travailler dur.  
+      Ton soutien inconditionnel dans ce projet est ce qui m’a permis d’avancer chaque jour. 🌟
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+
+  <div class="member">
+    <img src="maman.jpg" alt="Ma mère">
+    <h2>B. Edwige</h2>
+    <p class="desc">
+      Merci Maman pour ta patience et ton soutien constant. 💖  
+      Tu rends la famille plus forte et plus unie chaque jour.
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+
+    <div class="member">
+    <img src="mardo.jpg" alt="Grand frère">
+    <h2>B. Mardoschée</h2>
+    <p class="desc"> Merci mon grand frère pour ta force et ton esprit protecteur 💪. 
+      Tu as toujours été un exemple de responsabilité et de persévérance. 
+      Grâce à toi, j’ai appris à ne jamais abandonner et à croire en mes capacités. 🙏🌟
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+
+  <div class="member">
+    <img src="frere1.png" alt="Frère">
+    <h2>B. Josué</h2>
+    <p class="desc">
+      Mon frère est un constructeur talentueux et déterminé 🛠️🏗️.  
+      Merci pour ton travail acharné et ton dévouement, qui nous montrent chaque jour l’importance de la discipline et de la persévérance.  
+      Ton énergie et ton sens du détail font de toi un exemple à suivre. 💪
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+
+  <div class="member">
+    <img src="jonas.png" alt="Jonas">
+    <h2>B. Jonas</h2>
+    <p class="desc">
+      Moi, Jonas, je suis passionné par le web et la technologie 💻🚀.  
+      Merci à ma famille pour leur soutien et leur inspiration, qui me poussent à apprendre chaque jour et à réaliser mes projets avec détermination.  
+      J’aime créer, partager et explorer de nouvelles idées, toujours avec enthousiasme et curiosité.
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+
+  <div class="member">
+    <img src="soeur1.png" alt="Sœur">
+    <h2>B. Lydia</h2>
+    <p class="desc">
+      Ma sœur est une esthéticienne hors pair 💅✨.  
+      Merci pour ton talent, ta créativité et ton sens du style qui embellissent la vie de tous autour de toi.  
+      Tu transformes chaque détail en quelque chose de magique et inspires par ta passion pour la beauté.
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+
+  <div class="member">
+    <img src="soeur2.jpg" alt="Sœur">
+    <h2>B. Linda</h2>
+    <p class="desc">
+      Ma sœur est incroyablement débrouillarde et pleine de ressources 🧠💡.  
+      Merci pour ton esprit ingénieux, ta capacité à toujours trouver une solution et ton énergie contagieuse.  
+      Avec toi, aucun problème n’est insurmontable et tu nous inspires à être plus audacieux chaque jour.
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+
+    <div class="member">
+    <img src="lumière.png" alt="Sœur">
+    <h2>B. lumiere</h2>
+    <p class="desc">
+      Ma petite sœur, tu es comme un rayon de soleil 🌞. Avec ta joie de vivre et ton innocence, tu apportes de la lumière et du rire à chacun de nos jours. 
+      Tu me rappelles toujours la beauté de la simplicité et de l’amour pur 💖✨.
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+
+  <div class="member">
+    <img src="lune.png" alt="Sœur">
+    <h2>B. Lune</h2>
+    <p class="desc">
+      Ma chère cadette, tu es la douceur et la tendresse de notre famille 🌹. 
+      Ton écoute, ta gentillesse et ta patience font de toi une présence apaisante. 
+      Merci d’être toujours là pour nous, avec ton grand cœur 💕🙏.
+    </p>
+    <button class="desc-btn">Voir plus</button>
+  </div>
+</div>
+
+  <!-- Bouton retour -->
+  <a href="index.html">
+    <button class="back-btn">⬅ Retour à l'accueil</button>
+  </a>
+<script>
+document.querySelectorAll('.desc-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const desc = btn.previousElementSibling;
+    if(desc.style.display === "block") {
+      desc.style.display = "none";
+      btn.textContent = "Voir plus";
+    } else {
+      desc.style.display = "block";
+      btn.textContent = "Voir moins";
+    }
+  });
+});
+</script>
+<script>
+  // Sélectionne toutes les images
+  document.querySelectorAll(".member img").forEach(img => {
+    img.addEventListener("click", () => {
+      img.classList.toggle("zoomed"); // ajoute ou retire la classe "zoomed"
+    });
+  });
+</script>
+</body>
+</html>
