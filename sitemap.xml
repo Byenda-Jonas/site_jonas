@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://Byenda-Jonas.github.io/site_jonas/</loc>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/jonas.png</image:loc>
+      <image:caption>Jonas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/debut.jpg</image:loc>
+      <image:caption>Famille Pbl Byenda</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Page famille -->
+  <url>
+    <loc>https://Byenda-Jonas.github.io/site_jonas/famille.html</loc>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/père.jpg</image:loc>
+      <image:caption>Pbl Byenda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/maman.jpg</image:loc>
+      <image:caption>B. Edwige</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/mardo.jpg</image:loc>
+      <image:caption>B. Mardoschée</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/frère1.png</image:loc>
+      <image:caption>B. Josué</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/soeur1.png</image:loc>
+      <image:caption>B. Lydia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/soeur2.jpg</image:loc>
+      <image:caption>B. Linda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/lumière.png</image:loc>
+      <image:caption>B. lumière</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://Byenda-Jonas.github.io/site_jonas/lune.png</image:loc>
+      <image:caption>B. Lune</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
