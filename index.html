@@ -3,80 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famille PBL BYENDA - Nos Projets et Photos</title>
 
-  <title>Bienvenue chez la Famille PBL BYENDA</title>
-
-  <!-- 🔍 Référencement SEO -->
-  <meta name="description" content="Bienvenue sur le site officiel de la Famille PBL BYENDA. Découvrez notre histoire, nos valeurs et nos projets familiaux.">
-  <meta name="keywords" content="Famille PBL Byenda, Byenda Jonas, famille Byenda, site familial, Congo, famille chrétienne, PBL Byenda">
+  <!-- SEO -->
+  <meta name="description" content="Découvrez les projets, photos et histoires de la Famille PBL BYENDA.">
+  <meta name="keywords" content="Famille PBL Byenda, photos, projets, Congo, famille chrétienne">
   <meta name="author" content="Famille PBL BYENDA">
 
-  <!-- 🌐 Réseaux sociaux -->
-  <meta property="og:title" content="Famille PBL BYENDA">
-  <meta property="og:description" content="Découvrez le site officiel de la Famille PBL BYENDA – une famille unie par la foi, l’amour et la solidarité.">
-  <meta property="og:image" content="https://Byenda-Jonas.github.io/site_jonas/images/photo_famille.jpg">
-  <meta property="og:url" content="https://Byenda-Jonas.github.io/site_jonas/">
-  <meta property="og:type" content="website">
-
-  <!-- 🐦 Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Famille PBL BYENDA">
-  <meta name="twitter:description" content="Bienvenue sur le site de la Famille PBL BYENDA – Histoire, valeurs et projets.">
-  <meta name="twitter:image" content="https://Byenda-Jonas.github.io/site_jonas/images/photo_famille.jpg">
-
-  <!-- 📱 Icône -->
-  <link rel="icon" href="https://Byenda-Jonas.github.io/site_jonas/images/favicon.png" type="image/png">
-
-  <!-- 🎨 Styles -->
+  <!-- Styles -->
   <style>
-    /* --- Reset et base --- */
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      height: 100vh;
       font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      overflow: hidden;
-      position: relative;
+      background: #f0f2f5;
+      color: #222;
     }
 
-    /* --- Fond flouté --- */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url("jonas.png") no-repeat center center/cover;
-      filter: blur(8px) brightness(0.6);
-      z-index: -1;
-    }
-
-    /* --- Carte centrale --- */
-    .card {
-      background: rgba(0,0,0,0.7);
-      padding: 35px 25px;
-      border-radius: 25px;
-      max-width: 450px;
+    header {
+      background: linear-gradient(135deg, #ff9800, #ff5722);
+      padding: 30px;
       text-align: center;
-      box-shadow: 0 0 40px rgba(0,0,0,0.8);
-      position: relative;
-      z-index: 1;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    /* --- Image de la carte --- */
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    main {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    }
+
     .card img {
-      width: 160px;
-      height: 160px;
+      width: 100%;
+      height: 200px;
       object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #ff9800;
-      margin-bottom: 20px;
       transition: transform 0.4s;
     }
 
@@ -84,87 +71,97 @@
       transform: scale(1.05);
     }
 
-    h1 {
-      font-size: 2em;
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-content h2 {
       margin-bottom: 10px;
-      color: #ffcc00;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      color: #ff5722;
     }
 
-    .intro {
-      font-size: 1em;
-      line-height: 1.6;
-      color: #f1f1f1;
-      margin-bottom: 20px;
-      max-height: 120px;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
+    .card-content p {
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #555;
     }
 
-    .intro.show {
-      max-height: 1000px;
-    }
-
-    /* --- Bouton --- */
-    .card button {
-      padding: 14px 30px;
-      font-size: 1em;
-      border: none;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #ff9800, #ff5722);
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #222;
       color: white;
-      cursor: pointer;
-      transition: 0.4s;
-      box-shadow: 0 0 15px rgba(255,152,0,0.7);
+      margin-top: 50px;
     }
 
-    .card button:hover {
-      background: linear-gradient(135deg, #ff5722, #e65100);
-      transform: scale(1.08);
-      box-shadow: 0 0 25px rgba(255,87,34,0.9);
+    footer a {
+      color: #ff9800;
+      text-decoration: none;
     }
 
-    /* --- Header image --- */
-    .header-image {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
 
-    .header-image img {
-      width: 170px;
-      border-radius: 10px;
+      .card-content h2 {
+        font-size: 1.2em;
+      }
     }
-
   </style>
 </head>
 
 <body>
-  <div class="header-image">
-    <img src="debut.jpg" alt="Famille PBL BYENDA">
-  </div>
 
-  <div class="card">
-    <img src="jonas.png" alt="Jonas">
-    <h1>Bienvenue chez la Famille PBL BYENDA ✨</h1>
-    <p class="intro" id="intro">
-      La <strong>Famille PBL BYENDA</strong> est une famille unie par la foi, la bienveillance et la passion du progrès. 
-      Nous croyons en des valeurs solides : l’amour, la solidarité, la persévérance et le respect de chacun.  
-      À travers ce site, nous partageons notre parcours, nos projets et nos inspirations, dans l’espoir de transmettre 
-      un message de paix et d’unité à toutes les générations.  
-      <br><br>
-      Ce site est bien plus qu’une vitrine : c’est un espace vivant où la <em>famille</em> devient un symbole d’espoir, 
-      de force et de lumière.
-    </p>
+  <header>
+    <h1>Famille PBL BYENDA</h1>
+    <p>Découvrez nos photos, nos projets et nos histoires familiales</p>
+  </header>
 
-    <button onclick="document.getElementById('intro').classList.toggle('show')">
-      Découvrir
-    </button>
-  </div>
+  <main>
+    <!-- Carte 1 -->
+    <div class="card">
+      <img src="images/photo1.jpg" alt="Photo famille 1">
+      <div class="card-content">
+        <h2>Réunion familiale</h2>
+        <p>Un moment convivial où tous les membres se retrouvent pour partager rires et souvenirs.</p>
+      </div>
+    </div>
 
-  <script>
-    // Le bouton toggle pour le texte
-    // Déjà géré par onclick dans le bouton
-  </script>
+    <!-- Carte 2 -->
+    <div class="card">
+      <img src="images/photo2.jpg" alt="Photo famille 2">
+      <div class="card-content">
+        <h2>Projets solidaires</h2>
+        <p>Notre famille s’engage dans des initiatives communautaires pour aider et soutenir les autres.</p>
+      </div>
+    </div>
+
+    <!-- Carte 3 -->
+    <div class="card">
+      <img src="images/photo3.jpg" alt="Photo famille 3">
+      <div class="card-content">
+        <h2>Moments de joie</h2>
+        <p>Chaque sourire est un souvenir précieux et un témoignage de notre unité familiale.</p>
+      </div>
+    </div>
+
+    <!-- Carte 4 -->
+    <div class="card">
+      <img src="images/photo4.jpg" alt="Photo famille 4">
+      <div class="card-content">
+        <h2>Nos valeurs</h2>
+        <p>Foi, solidarité, persévérance et respect sont au cœur de tout ce que nous faisons.</p>
+      </div>
+    </div>
+
+    <!-- Ajoute autant de cartes que nécessaire -->
+  </main>
+
+  <footer>
+    &copy; 2025 Famille PBL BYENDA | <a href="index.html">Retour à l'accueil</a>
+  </footer>
+
 </body>
 </html>
