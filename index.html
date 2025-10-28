@@ -27,21 +27,27 @@
   <!-- 📱 Icône -->
   <link rel="icon" href="https://Byenda-Jonas.github.io/site_jonas/images/favicon.png" type="image/png">
 
-  <!-- 🎨 Style principal -->
+  <!-- 🎨 Styles -->
   <style>
-    /* --- Fond avec image floutée --- */
-    body {
+    /* --- Reset et base --- */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       height: 100vh;
+      font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: "Poppins", sans-serif;
       color: white;
       overflow: hidden;
+      position: relative;
     }
 
+    /* --- Fond flouté --- */
     body::before {
       content: "";
       position: absolute;
@@ -53,95 +59,112 @@
 
     /* --- Carte centrale --- */
     .card {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 20px;
+      background: rgba(0,0,0,0.7);
+      padding: 35px 25px;
+      border-radius: 25px;
+      max-width: 450px;
       text-align: center;
-      box-shadow: 0 0 25px rgba(0,0,0,0.8);
-      max-width: 400px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.8);
+      position: relative;
+      z-index: 1;
     }
 
-    /* --- Image nette au centre --- */
+    /* --- Image de la carte --- */
     .card img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #ff9800;
+      border: 5px solid #ff9800;
       margin-bottom: 20px;
+      transition: transform 0.4s;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
     }
 
     h1 {
       font-size: 2em;
       margin-bottom: 10px;
+      color: #ffcc00;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
 
-    p {
-      font-size: 1.1em;
+    .intro {
+      font-size: 1em;
+      line-height: 1.6;
+      color: #f1f1f1;
       margin-bottom: 20px;
+      max-height: 120px;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
     }
 
-    button {
-      padding: 12px 25px;
+    .intro.show {
+      max-height: 1000px;
+    }
+
+    /* --- Bouton --- */
+    .card button {
+      padding: 14px 30px;
       font-size: 1em;
       border: none;
       border-radius: 30px;
       background: linear-gradient(135deg, #ff9800, #ff5722);
       color: white;
       cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 0 10px rgba(255,152,0,0.6);
+      transition: 0.4s;
+      box-shadow: 0 0 15px rgba(255,152,0,0.7);
     }
 
-    button:hover {
+    .card button:hover {
       background: linear-gradient(135deg, #ff5722, #e65100);
       transform: scale(1.08);
-      box-shadow: 0 0 20px rgba(255,87,34,0.8);
+      box-shadow: 0 0 25px rgba(255,87,34,0.9);
     }
 
+    /* --- Header image --- */
     .header-image {
       position: absolute;
-      top: 10px;
+      top: 15px;
       left: 20px;
     }
 
     .header-image img {
       width: 170px;
-      height: auto;
       border-radius: 10px;
     }
+
   </style>
 </head>
 
 <body>
   <div class="header-image">
-    <img src="debut.jpg" alt="Famille Pbl Byenda">
+    <img src="debut.jpg" alt="Famille PBL BYENDA">
   </div>
 
   <div class="card">
     <img src="jonas.png" alt="Jonas">
     <h1>Bienvenue chez la Famille PBL BYENDA ✨</h1>
-    <p>Une page moderne et chaleureuse pour découvrir notre famille, nos valeurs et nos projets.</p>
-    <a href="famille.html">
-      <button>Découvrir</button>
-    </a>
-        <a href="famille.html">
-      
-          <!-- Texte d’introduction riche, juste sous le bouton -->
-  <p style="margin-top: 25px; font-size: 1em; color: #f1f1f1; line-height: 1.6;">
-    La <strong>Famille PBL BYENDA</strong> est une famille unie par la foi, la bienveillance et la passion du progrès. 
-    Nous croyons en des valeurs solides : l’amour, la solidarité, la persévérance et le respect de chacun.  
-    À travers ce site, nous partageons notre parcours, nos projets et nos inspirations, dans l’espoir de transmettre 
-    un message de paix et d’unité à toutes les générations.  
-    <br><br>
-    Ce site est bien plus qu’une vitrine : c’est un espace vivant où la <em>famille</em> devient un symbole d’espoir, 
-    de force et de lumière.
-  </p>
-    
+    <p class="intro" id="intro">
+      La <strong>Famille PBL BYENDA</strong> est une famille unie par la foi, la bienveillance et la passion du progrès. 
+      Nous croyons en des valeurs solides : l’amour, la solidarité, la persévérance et le respect de chacun.  
+      À travers ce site, nous partageons notre parcours, nos projets et nos inspirations, dans l’espoir de transmettre 
+      un message de paix et d’unité à toutes les générations.  
+      <br><br>
+      Ce site est bien plus qu’une vitrine : c’est un espace vivant où la <em>famille</em> devient un symbole d’espoir, 
+      de force et de lumière.
+    </p>
+
+    <button onclick="document.getElementById('intro').classList.toggle('show')">
+      Découvrir
+    </button>
   </div>
+
+  <script>
+    // Le bouton toggle pour le texte
+    // Déjà géré par onclick dans le bouton
+  </script>
 </body>
 </html>
-
-
-
-
