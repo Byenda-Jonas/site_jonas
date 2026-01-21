@@ -4,93 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bienvenue chez la Famille PBL BYENDA</title>
+  <title>Famille PBL BYENDA - Souvenirs et Photos</title>
 
-  <!-- 🔍 SEO -->
   <meta name="description" content="Bienvenue sur le site officiel de la Famille PBL BYENDA. Découvrez notre histoire, nos valeurs et nos projets familiaux.">
   <meta name="keywords" content="Famille PBL Byenda, Byenda Jonas, famille Byenda, site familial, Congo, famille chrétienne, PBL Byenda">
   <meta name="author" content="Famille PBL BYENDA">
 
-  <!-- 🌐 Réseaux sociaux -->
   <meta property="og:title" content="Famille PBL BYENDA">
   <meta property="og:description" content="Découvrez le site officiel de la Famille PBL BYENDA – une famille unie par la foi, l’amour et la solidarité.">
   <meta property="og:image" content="https://Byenda-Jonas.github.io/site_jonas/images/photo_famille.jpg">
   <meta property="og:url" content="https://Byenda-Jonas.github.io/site_jonas/">
   <meta property="og:type" content="website">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Famille PBL BYENDA">
-  <meta name="twitter:description" content="Bienvenue sur le site de la Famille PBL BYENDA – Histoire, valeurs et projets.">
-  <meta name="twitter:image" content="https://Byenda-Jonas.github.io/site_jonas/images/photo_famille.jpg">
-
-  <!-- Icône -->
-  <link rel="icon" href="https://Byenda-Jonas.github.io/site_jonas/images/favicon.png" type="image/png">
-
-  <!-- Styles -->
   <style>
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column; /* Permet d'aligner la carte et le livre d'or verticalement */
       align-items: center;
       font-family: 'Poppins', sans-serif;
       color: white;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto; /* Autorise le défilement vers le bas */
       position: relative;
     }
 
     /* Fond flouté */
     body::before {
       content: "";
-      position: absolute;
+      position: fixed; /* Reste fixe pendant le scroll */
       top: 0; left: 0; right: 0; bottom: 0;
       background: url("jonas.png") no-repeat center center/cover;
       filter: blur(8px) brightness(0.6);
       z-index: -1;
     }
 
+    .header-image {
+      padding: 20px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .header-image img {
+      width: 170px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
     /* Carte centrale */
     .card {
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.75);
       padding: 35px 25px;
       border-radius: 25px;
       max-width: 450px;
       text-align: center;
       box-shadow: 0 0 40px rgba(0,0,0,0.8);
-      position: relative;
-      z-index: 1;
+      margin: 40px 20px; /* Espace autour de la carte */
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
-    /* Image nette */
-    .card img {
+    .card img.profile {
       width: 160px;
       height: 160px;
       object-fit: cover;
       border-radius: 50%;
       border: 5px solid #ff9800;
       margin-bottom: 20px;
-      transition: transform 0.4s;
-    }
-
-    .card img:hover {
-      transform: scale(1.05);
     }
 
     h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
+      font-size: 1.8em;
       color: #ffcc00;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    }
-
-    p {
-      font-size: 1em;
-      line-height: 1.6;
-      color: #f1f1f1;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     button {
@@ -102,24 +89,35 @@
       color: white;
       cursor: pointer;
       transition: 0.4s;
-      box-shadow: 0 0 15px rgba(255,152,0,0.7);
+      text-decoration: none;
     }
 
     button:hover {
-      background: linear-gradient(135deg, #ff5722, #e65100);
-      transform: scale(1.08);
-      box-shadow: 0 0 25px rgba(255,87,34,0.9);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,152,0,0.6);
     }
 
-    .header-image {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-    }
-
-    .header-image img {
-      width: 170px;
+    /* Style pour votre citation */
+    .citation {
+      font-style: italic;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
       border-radius: 10px;
+      margin: 20px 0;
+      border-left: 4px solid #ffcc00;
+      font-size: 0.9em;
+      text-align: left;
+    }
+
+    /* Section Livre d'Or */
+    #livre-d-or {
+      width: 90%;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.95); /* Fond clair pour que les commentaires soient lisibles */
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 20px;
+      color: #333; /* Texte sombre pour lisibilité */
     }
   </style>
 </head>
@@ -130,31 +128,25 @@
   </div>
 
   <div class="card">
-    <img src="jonas.png" alt="Jonas">
+    <img src="jonas.png" alt="Jonas" class="profile">
     <h1>Bienvenue chez la Famille PBL BYENDA ✨</h1>
+    
+    <div class="citation">
+      "J'adore vraiment quand je me trouve coincé devant mon appareil, les yeux braqués sur l'écran, en train de regarder les merveilles de la famille PBL BYENDA."
+    </div>
+
     <p>Une page moderne et chaleureuse pour découvrir notre famille, nos valeurs et nos projets.</p>
 
-    <!-- Bouton qui redirige vers famille.html -->
     <a href="famille.html">
-      <button>Découvrir</button>
+      <button>Découvrir notre histoire</button>
     </a>
-
-    <!-- Texte d’introduction court -->
-    <p style="margin-top: 25px;">
-      La <strong>Famille PBL BYENDA</strong> vous souhaite la bienvenue ! Cliquez sur "Découvrir" pour voir nos projets, photos et histoires familiales.
-    </p>
   </div>
-  <section id="livre-d-or" style="max-width: 800px; margin: 40px auto; padding: 20px; font-family: sans-serif;">
-    <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 30px;">
-    <h2 style="text-align: center; color: #333;">📖 Livre d'Or de la Famille</h2>
+
+  <section id="livre-d-or">
+    <h2 style="text-align: center; margin-top: 0;">📖 Livre d'Or</h2>
     <p style="text-align: center; color: #666;">Laissez-nous un petit souvenir de votre passage !</p>
     
     <script src="https://giscus.app/client.js"
-        ... (votre code copié sur giscus.app) ...
-        async>
-    </script>
-</section>
-<script src="https://giscus.app/client.js"
         data-repo="Byenda-Jonas/site_jonas"
         data-repo-id="R_kgDOPfZlbw"
         data-category="Announcements"
@@ -164,12 +156,13 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="bottom"
-        data-theme="preferred_color_scheme"
+        data-theme="light"
         data-lang="fr"
         crossorigin="anonymous"
         async>
-</script>
-</body>
+    </script>
+  </section>
 
+</body>
 </html>
 
